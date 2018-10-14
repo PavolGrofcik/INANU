@@ -1,2 +1,3 @@
 # INANU
-Let there be monsters!
+
+Ipython online viewer: https://nbviewer.jupyter.org/
