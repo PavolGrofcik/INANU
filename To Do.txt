@@ -1,0 +1,3 @@
+1: Rozparsovať JSON na nové columns DONE
+2: Odstrániť duplicity IDENTIFICATED
+3: Concatenation 2 datasety podľa mena a adresy NONE
