@@ -1,0 +1,15 @@
+Poznámky k Zadanie č. 3
+Zoberiem Testovací(train) - rozhodovací strom - dobré results 
+Na validačnom overíme - Optimálne nastavenie parametrov
+Najlepšie možné overíme na 3ťom datasete
+
+Porovnanie primitívnej metódy vs Decision Trees.
+Ak primitívny spôsob vyhráva -> faktory!
+
+Fill Missing values by 3 Methods, Porovnanie
+na týchto spôsoboch, čo bolo lepšie.
+Vznikné 6 nových datasetov - 3 (Train) + 3 (Valid) -> Script
+Hodnoty na trénovanie používam z Trénovacej sady a na validáciu
+používam z Valid pre danú metódu.
+
+10-násobná krížová validácia
