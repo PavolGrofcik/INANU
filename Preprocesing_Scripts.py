@@ -289,7 +289,7 @@ def format_categorical(column):
 ############################################################
 #Merging Datasets
 #Here is a function that gets rid off duplicates and keeps data from other duplicates
-def fill_from_duplicates(df, duplicates, indexes,df_new):
+def fill_from_duplicates(df, duplicates, indexes):
     """ This is function that get rid off duplicates in 
         dataframe df on indices indexes
     """
@@ -311,7 +311,7 @@ def fill_from_duplicates(df, duplicates, indexes,df_new):
             df.drop(i+1, inplace = True)
             if(len(indexes) == 0):
                 #At the end we reset index
-                df_new.reset_index(drop=True,inplace=True)
+                df.reset_index(drop=True,inplace=True)
                 print("Done")
                 break
     
