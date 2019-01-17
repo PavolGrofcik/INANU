@@ -290,29 +290,31 @@ def format_categorical(column):
 #Merging Datasets
 #Here is a function that gets rid off duplicates and keeps data from other duplicates
 def fill_from_duplicates(df, duplicates, indexes):
-    """ This is function that get rid off duplicates in 
+    """ This is function that get rid of duplicates in 
         dataframe df on indices indexes
     """
     
     indexes = indexes.tolist()
     
     #Iterating row by row
-    for i in range(0, len(df)):
-        if((i+1) == indexes[0]):
+    for i in range(len(df)-1,0):
+        if((i-1) == indexes[0]):
             
            #For Nan column we search over all duplicates to fill proper value
             for col in df.columns:
-                if (pd.isnull(df.at[i,col]) or df.at[i,col] == "?"):
-                    df.at[i,col] = df.at[i+1,col]
+                #print(i,col,df.at[i,col])
+                if pd.isnull(df.at[i,col]) or df.at[i,col] == "?":
+                    df.at[i,col] = df.at[i-1,col]
             
             indexes.pop(0)
             
             #Then we drop the duplicated row
-            df.drop(i+1, inplace = True)
+            df.drop(i-1, inplace = True)
             if(len(indexes) == 0):
                 #At the end we reset index
                 df.reset_index(drop=True,inplace=True)
                 print("Done")
                 break
     
+	
     
